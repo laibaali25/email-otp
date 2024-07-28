@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email OTP Authentication</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id='cont' class='rightM'>
+    <form id="studentForm" >
+      <h2>Student Registration Form</h2>
+      <div class="formpart">
+        <div id="compName">
+          <input id="firstN" type="text" placeholder="NAME" name="user_name" />
+        </div>
+
+        <div id="compName">
+          <input id="address" type="text" placeholder="ADDRESS" name="user_address" />
+        </div>
+
+        <div id="compName">
+          <input type="text" placeholder="AGE" name="user_age" />
+        </div>
+
+        <div id="compName">
+          <input id="phone" type="text" placeholder="PHONE NUMBER" name="user_number" maxLength="10" minLength="10" />
+        </div>
+
+        <div id="compName">
+          <input id="email" type="email" placeholder="EMAIL" name="email_id" />
+        </div>
+
+        <div id="compName">
+          <input type="password" placeholder="PASSWORD" name="user_password" />
+        </div>
+
+        <button type="button" class="btnD" id="sendOtpBtn">Send OTP</button>
+
+        <div id="compName">
+          <input type="text" id="otpInput" placeholder="Enter OTP" />
+        </div>
+
+        <button type="button" class="btnD" id="verifyOtpBtn">Verify OTP</button>
+
+        <div id="ans"></div>
+      </div>
+    </form>
+  </div>
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "4UNUvl4QGWTCG22jF",
+      });
+   })();
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
+
